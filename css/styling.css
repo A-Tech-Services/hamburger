@@ -1,0 +1,96 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #262626;
+}
+
+
+li{
+    list-style-type: none;    
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.7s ease;
+}
+
+li a:hover{
+    color: dodgerblue;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.navbar .logo{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger, .activeburger{
+    display: none;
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+}
+
+.hamburger span, .activeburger span{
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+
+@media(max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+
+
+    .hamburger.active{
+        display: none;
+    }
+
+    .activeburger.active{
+        display: block;
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: 0;
+        top: -100%;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        top: 70px;
+    }
+
+}
